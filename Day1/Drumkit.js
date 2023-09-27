@@ -19,7 +19,7 @@ function removeTransition(e) {
 
   this.classList.remove("playing") //remove the playing className
 }
-const keys = document.querySelectorAll(".key"); //gives you an array of all the keys with the specified className
+const keys = document.querySelectorAll(".key"); //The querySelectorAll gives you an array of all the keys with the specified className
 
 keys.forEach((key) => {
   key.addEventListener("transitionend", removeTransition);
