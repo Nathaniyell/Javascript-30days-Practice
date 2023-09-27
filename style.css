@@ -43,10 +43,10 @@ html {
     background: #000;
     position: absolute;
     top: 50%;
-    transform-origin: 100%;
+    transform-origin: 100%; /*puts the pivot point of the hands of the clock to be the center*/
     transform: rotate(90deg);
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-    transition: all 0.5s;
+    transition: all 0.05s;
   }
   .hour-hand{
     background-color: #000;
