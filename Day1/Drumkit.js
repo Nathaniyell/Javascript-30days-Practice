@@ -12,14 +12,15 @@ window.addEventListener("keydown", (e) => {
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //selects all the elements with a class of key which has the data attribute specified
   console.log(key);
 
-  key.classList.add("playing") // add the playing class to the keys to help bring in the animation
-
+  key.classList.add("playing"); // add the playing class to the keys to help bring in the animation
 });
-function removeTransition(e){
+function removeTransition(e) {
+  if (e.propertyName !== "transform") return; //skip the property on the event object if it is not a transform event that took place
 
+  this.classList.remove("playing") //remove the playing className
 }
-const keys = document.querySelectorAll('.key') //gives you an array of all the keys with the specified className
+const keys = document.querySelectorAll(".key"); //gives you an array of all the keys with the specified className
 
-keys.forEach(key=>{
-    key.addEventListener('transitionend', removeTransition)
-})
+keys.forEach((key) => {
+  key.addEventListener("transitionend", removeTransition);
+});
