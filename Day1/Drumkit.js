@@ -12,6 +12,14 @@ window.addEventListener("keydown", (e) => {
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //selects all the elements with a class of key which has the data attribute specified
   console.log(key);
 
-  key.classList.add("playing")
+  key.classList.add("playing") // add the playing class to the keys to help bring in the animation
 
 });
+function removeTransition(e){
+
+}
+const keys = document.querySelectorAll('.key') //gives you an array of all the keys with the specified className
+
+keys.forEach(key=>{
+    key.addEventListener('transitionend', removeTransition)
+})
