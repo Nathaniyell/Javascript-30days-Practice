@@ -6,4 +6,5 @@ window.addEventListener("keydown", (e) => {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //using the attribute selector, you select the audio element that has a keycode of the key selected
 
   if (!audio) return; //if the key pressed is not attributed to any audio element then return
+  audio.play() //plays the sound associated with the key that was pressed
 });
