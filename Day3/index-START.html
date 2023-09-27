@@ -16,15 +16,27 @@
 
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
+
+    <!-- Input type of colour brings out a colour picker when it is clicked -->
   </div>
 
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
-
+    /* define css variables */
+:root{ 
+  --base: #ffc600;
+  --spacing: 10px; 
+  --blur: 10px
+}
     /*
       misc styles, nothing to do with CSS variables
     */
+    img{
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
 
     body {
       text-align: center;
