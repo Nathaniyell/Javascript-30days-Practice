@@ -12,4 +12,6 @@ window.addEventListener("keydown", (e) => {
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //selects all the elements with a class of key which has the data attribute specified
   console.log(key);
 
+  key.classList.add("playing")
+
 });
