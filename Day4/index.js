@@ -81,10 +81,14 @@ console.log(inventorNames);
 const ordered = inventors.sort((firstPerson, secondPerson) =>
   firstPerson.year > secondPerson.year ? 1 : -1
 );
-console.log(ordered)
+console.table(ordered);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
+const totalYears = inventors.reduce((total, inventor) => {
+  return total + (inventor.passed - inventor.year); //subtract the year each inventor died from the year they were born and add that to the total
+}, 0); //The scond parameter allows you to set the first value of the total variable to zero so as not to return undefined
+console.log(totalYears);
 
 // 5. Sort the inventors by years lived
 
