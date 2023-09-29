@@ -24,7 +24,7 @@
         return false
     }
   })
-
+console.table(fifteen) //returns the list of inventors that passed the specified parameters in a tabular form
   const people = [
     'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
     'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
@@ -37,6 +37,9 @@
 
   // Array.prototype.map()
   // 2. Give us an array of the inventors first and last names
+  const inventorNames = inventors.map(inventor=>{
+    return inventor.first && inventor.last
+  }) //Map takes in an array, does something with that array and returns a new array.
 
   // Array.prototype.sort()
   // 3. Sort the inventors by birthdate, oldest to youngest
