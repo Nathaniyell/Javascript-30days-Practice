@@ -142,7 +142,7 @@ if(!obj[item]){
     obj[item] = 0
 }
     obj[item]++
-}, , {
+}, {
     car: 0,
     walk:0,
     truck:0
