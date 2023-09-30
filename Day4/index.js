@@ -106,17 +106,18 @@ const links = Array.from(category.querySelectorAll("a")); //converts the domeNod
 
 //const links = [...category.querySelectorAll("a")]; //this goes to show that you can call the dom methods on an element to access other elements nested within it. Also the spread operator converts the domeNode into an array so that you can use array methods on the array that is returned
 
-
 const de = links.map((link) => {
-  return link.textContent.filter(streetName=>streetName.includes("de"))
+  return link.textContent.filter((streetName) => streetName.includes("de"));
 });
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
-const alpha = people.sort((lastOne, nextOne)=>{
-    const [last, first] = lastOne.split(", ")//destructure the first and the name and split it into two using a comma and a space
-})
+const alpha = people.sort((lastOne, nextOne) => {
+  const [alast, afirst] = lastOne.split(", "); //destructure the first and the name and split it into two using a comma and a space
+  const [blast, bfirst] = nextOne.split(", ");
+  return alast > blast ? 1 : -1;
+});
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
