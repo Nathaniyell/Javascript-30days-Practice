@@ -114,6 +114,10 @@ const de = links.map((link) => {
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
+const alpha = people.sort((lastOne, nextOne)=>{
+    const [last, first] = lastOne.split(", ")//destructure the first and the name and split it into two using a comma and a space
+})
+
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = [
