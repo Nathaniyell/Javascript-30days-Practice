@@ -102,7 +102,10 @@ console.table(oldest);
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 const category = document.querySelector(".mw-category");
-const links = category.querySelectorAll("a"); //this goes to show that you can call the dom methods on an element to access other elements nested within it
+const links = Array.from(category.querySelectorAll("a")); //converts the domeNode into an array so that you can use array methods on the array that is returned
+
+//const links = [...category.querySelectorAll("a")]; //this goes to show that you can call the dom methods on an element to access other elements nested within it. Also the spread operator converts the domeNode into an array so that you can use array methods on the array that is returned
+
 
 const de = links.map((link) => {
   return link.textContent === "de" ? 1 : -1;
