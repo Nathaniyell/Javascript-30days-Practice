@@ -102,8 +102,11 @@ console.table(oldest);
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 const category = document.querySelector(".mw-category");
-const links = category.querySelectorAll("a") //this goes to show that you can call the dom methods on an element to access other elements nested within it
+const links = category.querySelectorAll("a"); //this goes to show that you can call the dom methods on an element to access other elements nested within it
 
+const de = links.map((link) => {
+  return link.textContent === "de" ? 1 : -1;
+});
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
