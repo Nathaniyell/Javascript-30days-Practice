@@ -108,7 +108,7 @@ const links = Array.from(category.querySelectorAll("a")); //converts the domeNod
 
 
 const de = links.map((link) => {
-  return link.textContent === "de" ? 1 : -1;
+  return link.textContent.filter(streetName=>streetName.includes("de"))
 });
 
 // 7. sort Exercise
