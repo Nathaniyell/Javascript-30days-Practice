@@ -25,49 +25,6 @@ const fifteen = inventors.filter((inventor) => {
   }
 });
 console.table(fifteen); //returns the list of inventors that passed the specified parameters in a tabular form
-const people = [
-  "Bernhard, Sandra",
-  "Bethea, Erin",
-  "Becker, Carl",
-  "Bentsen, Lloyd",
-  "Beckett, Samuel",
-  "Blake, William",
-  "Berger, Ric",
-  "Beddoes, Mick",
-  "Beethoven, Ludwig",
-  "Belloc, Hilaire",
-  "Begin, Menachem",
-  "Bellow, Saul",
-  "Benchley, Robert",
-  "Blair, Robert",
-  "Benenson, Peter",
-  "Benjamin, Walter",
-  "Berlin, Irving",
-  "Benn, Tony",
-  "Benson, Leana",
-  "Bent, Silas",
-  "Berle, Milton",
-  "Berry, Halle",
-  "Biko, Steve",
-  "Beck, Glenn",
-  "Bergman, Ingmar",
-  "Black, Elk",
-  "Berio, Luciano",
-  "Berne, Eric",
-  "Berra, Yogi",
-  "Berry, Wendell",
-  "Bevan, Aneurin",
-  "Ben-Gurion, David",
-  "Bevel, Ken",
-  "Biden, Joseph",
-  "Bennington, Chester",
-  "Bierce, Ambrose",
-  "Billings, Josh",
-  "Birrell, Augustine",
-  "Blair, Tony",
-  "Beecher, Henry",
-  "Biondo, Frank",
-];
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
@@ -102,21 +59,64 @@ console.table(oldest);
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 const category = document.querySelector(".mw-category");
-const links = Array.from(category.querySelectorAll("a")); //converts the domeNode into an array so that you can use array methods on the array that is returned
+const links = Array.from(category.querySelectorAll("a")); //converts the domeNode gotten from document.querySelectorAll into an array so that you can use array methods on the array that is returned
 
 //const links = [...category.querySelectorAll("a")]; //this goes to show that you can call the dom methods on an element to access other elements nested within it. Also the spread operator converts the domeNode into an array so that you can use array methods on the array that is returned
 
 const de = links.map((link) => {
   return link.textContent.filter((streetName) => streetName.includes("de"));
 });
-
+const people = [
+    "Bernhard, Sandra",
+    "Bethea, Erin",
+    "Becker, Carl",
+    "Bentsen, Lloyd",
+    "Beckett, Samuel",
+    "Blake, William",
+    "Berger, Ric",
+    "Beddoes, Mick",
+    "Beethoven, Ludwig",
+    "Belloc, Hilaire",
+    "Begin, Menachem",
+    "Bellow, Saul",
+    "Benchley, Robert",
+    "Blair, Robert",
+    "Benenson, Peter",
+    "Benjamin, Walter",
+    "Berlin, Irving",
+    "Benn, Tony",
+    "Benson, Leana",
+    "Bent, Silas",
+    "Berle, Milton",
+    "Berry, Halle",
+    "Biko, Steve",
+    "Beck, Glenn",
+    "Bergman, Ingmar",
+    "Black, Elk",
+    "Berio, Luciano",
+    "Berne, Eric",
+    "Berra, Yogi",
+    "Berry, Wendell",
+    "Bevan, Aneurin",
+    "Ben-Gurion, David",
+    "Bevel, Ken",
+    "Biden, Joseph",
+    "Bennington, Chester",
+    "Bierce, Ambrose",
+    "Billings, Josh",
+    "Birrell, Augustine",
+    "Blair, Tony",
+    "Beecher, Henry",
+    "Biondo, Frank",
+  ];
+  
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
 const alpha = people.sort((lastOne, nextOne) => {
-  const [alast, afirst] = lastOne.split(", "); //destructure the first and the name and split it into two using a comma and a space
-  const [blast, bfirst] = nextOne.split(", ");
-  return alast > blast ? 1 : -1;
+  const [aLast, aFirst] = lastOne.split(", "); //destructure the first and the name and split it into two using a comma and a space
+  const [bLast, bFirst] = nextOne.split(", ");
+  return aLast > bLast ? 1 : -1;
 });
 
 // 8. Reduce Exercise
