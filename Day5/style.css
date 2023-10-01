@@ -69,7 +69,9 @@ body {
   align-items: center;
 }
 .panel > *:first-child{transform: translateY(-100%);}
+.panel.open-active > *:first-child{transform: translateY(0);}
 .panel > *:last-child{transform: translateY(100%);}
+.panel.panel.open-active > *:last-child{transform: translateY(0);}
 
 .panel p {
   text-transform: uppercase;
@@ -84,4 +86,6 @@ body {
 
 .panel.open {
   font-size: 40px;
+  flex: 5; 
+  /* when it has a class of open, it should take 5times the flex size of 1 as it was given earlier thereby taking up more size on the screen */
 }
