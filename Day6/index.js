@@ -4,26 +4,42 @@ const endpoint =
 const cities = [];
 fetch(endpoint)
   .then((resp) => resp.json())
-  .then((data) => cities.push(...data));
-console.log(cities);
+  .then((data) => cities.push(...data))
+  .catch((error) => console.error("Fetch error:", error));
+
+// console.log(cities);
 
 function findMatches(wordToMatch, cities) {
   return cities.filter((place) => {
     //we need to check if the city or state matches what was searched
     const regex = new RegExp(wordToMatch, "gi");
-    place.city.match(regex) || place.state.match(regex);
+    return place.city.match(regex) || place.state.match(regex);
   });
+}
+
+function numbersWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function displayMatches() {
   const matchArray = findMatches(this.value, cities); //the value from the input field is passed as an argument as well as the cities array. The value of the inputField is the wordToMatch
-  console.log(matchArray);
+//   console.log(matchArray);
   const html = matchArray
     .map((place) => {
+      const regex = new RegExp(this.value, "gi");
+      const cityName = place.city.replace(
+        regex,
+        `<span class="hl">${this.value}</span>`
+      ); //replace the regex(whatever it matches) with a highlighted span
+      const stateName = place.state.replace(
+        regex,
+        `<span class="hl">${this.value}</span>`
+      ); //replace the regex(whatever it matches) with a highlighted span
+
       return `
     <li>
-<span class="name">${place.city}, ${place.state}</span>
-<span class="population">${place.population}</span>
+<span class="name">${cityName}, ${stateName}</span>
+<span class="population">${numbersWithCommas(place.population)}</span>
 
     </li>
     `;
