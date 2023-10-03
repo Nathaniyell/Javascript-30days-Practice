@@ -3,5 +3,13 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 const cities =[];
 fetch(endpoint)
 .then(resp=>resp.json())
-.then(data=>cities.push(data))
+.then(data=>cities.push(...data))
 console.log(cities)
+
+function findMatches(wordToMatch, cities){
+    return cities.filter(place=>{
+        //we need to check if the city or state matches what was searched
+        const regex = new RegExp(wordToMatch, "gi")
+        place.city.match(regex) 
+    })
+}
