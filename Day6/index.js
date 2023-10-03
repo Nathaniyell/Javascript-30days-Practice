@@ -16,12 +16,23 @@ function findMatches(wordToMatch, cities) {
 }
 
 function displayMatches() {
-  console.log(this.value);
+  const matchArray = findMatches(this.value, cities); //the value from the input field is passed as an argument as well as the cities array. The value of the inputField is the wordToMatch
+  console.log(matchArray);
+  const html = matchArray
+    .map((place) => {
+      return `
+    <li>
+<span class="name">${place.city}, ${place.state}</span>
+<span class="population">${place.population}</span>
+
+    </li>
+    `;
+    })
+    .join(""); //this .join method convert everything in the array into one item and not multiple items
+  suggestions.innerHTML = html;
 }
 const searchInput = document.querySelector(".search");
-const suggestions = document.querySelector(".suggestions");//the change event only fires when you've clicked out of the input field. You can also listen for a keyup event and fire the function so that at every instance that a key is clicked, the function runs.
+const suggestions = document.querySelector(".suggestions"); //the change event only fires when you've clicked out of the input field. You can also listen for a keyup event and fire the function so that at every instance that a key is clicked, the function runs.
 
-
-
-searchInput.addEventListener('keyup', displayMatches) 
-searchInput.addEventListener('change', displayMatches) 
+searchInput.addEventListener("keyup", displayMatches);
+searchInput.addEventListener("change", displayMatches);
