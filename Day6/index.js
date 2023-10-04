@@ -23,6 +23,12 @@ Modifiers are used to perform case-insensitive and global searches:
 2. i - Perform case-insensitive matching
 3. m - Perform multiline matching
 
+Brackets are used to find a range of characters:
+1. [abc] - Find any character between the brackets
+2. [^abc] - Find any character NOT between the brackets
+3. [0-9] - Find any character between the brackets (any digit)
+4. [^0-9] -	Find any character NOT between the brackets (any non-digit)
+5. (x|y) - Find any of the alternatives specified
 
 */
 
