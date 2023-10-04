@@ -18,6 +18,10 @@ function findMatches(wordToMatch, cities) {
 }
 /*
 The RegExp object is used for matching text with a pattern.
+syntax:
+new RegExp(pattern, flags)
+Pattern - The text of the regular expression. This can also be another RegExp object.
+flags otherwise known as modifiers may contain the following
 Modifiers are used to perform case-insensitive and global searches:
 1. g - 	Perform a global match (find all matches rather than stopping after the first match)
 
@@ -26,7 +30,7 @@ let result = text.match(pattern);
 
 Note: For a global, case-insensitive search, use the "i" modifier together with the g modifier.
 
-2. i - Perform case-insensitive matching
+2. i - Perform case-insensitive matching (When matching, casing differences are ignored.)
 3. m - Perform multiline matching
 
 Brackets are used to find a range of characters:
