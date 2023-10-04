@@ -16,7 +16,15 @@ function findMatches(wordToMatch, cities) {
     return place.city.match(regex) || place.state.match(regex);
   });
 }
-//The RegExp object is used for matching text with a pattern.
+/*
+The RegExp object is used for matching text with a pattern.
+Modifiers are used to perform case-insensitive and global searches:
+1. g - 	Perform a global match (find all matches rather than stopping after the first match)
+2. i - Perform case-insensitive matching
+3. m - Perform multiline matching
+
+
+*/
 
 function numbersWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
