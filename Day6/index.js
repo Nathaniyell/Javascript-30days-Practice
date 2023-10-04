@@ -16,6 +16,7 @@ function findMatches(wordToMatch, cities) {
     return place.city.match(regex) || place.state.match(regex);
   });
 }
+//The RegExp object is used for matching text with a pattern.
 
 function numbersWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
