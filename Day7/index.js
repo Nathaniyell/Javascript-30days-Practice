@@ -22,11 +22,21 @@ const isAdult = people.some((person)=>{
     const currentAge = currentYear - person.year
     if(currentAge >= 19){
         console.log(`${person.name} is ${currentAge} years old`)
+        return true
     }
 })
-console.log(isAdult)
+console.log(isAdult) //.some() returns true if at least one of the items of the array meets the criteria
 
   // Array.prototype.every() // is everyone 19 or older?
+  const allAdults = people.every((person)=>{
+    const currentYear = (new Date()).getFullYear()
+    const currentAge = currentYear - person.year
+    if(currentAge >= 19){
+        console.log(`${person.name} is ${currentAge} years old`)
+        return true
+    }
+})
+console.log(allAdults) //.every() returns false if not all the items of the array meets the criteria. So all items in the array must meet the cirteria for it to return true
 
   // Array.prototype.find()
   // Find is like filter, but instead returns just the one you are looking for
