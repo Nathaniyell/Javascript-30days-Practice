@@ -17,6 +17,15 @@ const people = [
 
   // Some and Every Checks
   // Array.prototype.some() // is at least one person 19 or older?
+const isAdult = people.some((person)=>{
+    const currentYear = (new Date()).getFullYear()
+    const currentAge = currentYear - person.year
+    if(currentAge >= 19){
+        console.log(`${person.name} is ${currentAge} years old`)
+    }
+})
+console.log(isAdult)
+
   // Array.prototype.every() // is everyone 19 or older?
 
   // Array.prototype.find()
