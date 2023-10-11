@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+      // Regular
+      console.log("Hello World");
 
-    // Regular
-        console.log("Hello World")
+      // Interpolated
+      console.log("I am a %s string", "😋");
 
-    // Interpolated
-    console.log("I am a %s string", "😋")
+      // Styled
+      console.log("%c Hello World", "background-color: red;"); //%c helps you style the console message
 
-    // Styled
-    console.log("%c Hello World", "background-color: red;"); //%c helps you style the console message
+      // warning!
+      console.warn("Warning!!");
 
-    // warning!
-    console.warn("Warning!!");
+      // Error :|
+      console.error("There is an error");
+      // Info
+      console.info(
+        "Here is an important piece of information you don't want to miss"
+      );
 
-    // Error :|
+      // Testing
+      console.assert(1 === 1, "that is wrong!"); //this only runs when the first argument you provided doesn't equate to true
+      const p = document.querySelector('p')
+      console.assert(p.classList.contains("ouch"), "that is wrong")
 
-    // Info
+      // clearing
+      console.clear() // clears the console automatically
 
-    // Testing
+      // Viewing DOM Elements
+      console.log(p)
+      console.dir(p) //lists all the different methods and properties associated with that element
 
-    // clearing
+      // Grouping together
+      dogs.forEach(dog=>{
+        console.group(`${dog.name}`)
+        console.log(`This is a ${dog.name}`)
+        console.log(`${dog.name} is ${dog.age} years old`)
+        console.log(`${dog.name} is ${dog.age * 7} age`)
+        console.group(`${dog.name}`)
+      })
 
-    // Viewing DOM Elements
+      // counting
+      console.count("Nath")
+      console.count("UruaEkpa TechBros")
+      console.count("Nath")
+      console.count("UruaEkpa TechBros")
+      console.count("Nath")
+      console.count("UruaEkpa TechBros")
+      console.count("Nath")
+      console.count("UruaEkpa TechBros")
+      console.count("UruaEkpa TechBros")
+      //Tells you how many times you have counted a particular thing
+      
+      
+      // timing
 
-    // Grouping together
 
-    // counting
-
-    // timing
-
-  </script>
-</body>
+    </script>
+  </body>
 </html>
