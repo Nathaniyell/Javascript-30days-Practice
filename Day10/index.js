@@ -15,7 +15,7 @@ function handleChecked(e) {
       }
     });
   }
-  // console.log(e);
+  lastChecked = this;
 }
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener("click", handleChecked);
