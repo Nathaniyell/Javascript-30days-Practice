@@ -39,6 +39,10 @@ function handleProgress() {
   const percentage = (video.currentTime / video.duration) * 100;
   progressBar.style.flexBasis = `${percentage}%`
 }
+function scrub(e){
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration // get the value of where the progress bar was clicked and divide it by the total length of the dive then multiply it by the total video duration
+    video.currentTime = scrubTime
+}
 
 /*Hook up event listeners */
 video.addEventListener("click", togglePlay);
@@ -55,3 +59,5 @@ skipButtons.forEach((button) => {
 ranges.forEach((range) => {
   range.addEventListener("change", handleRangeUpdate);
 });
+
+progress.addEventListener("click", scrub)
