@@ -37,11 +37,11 @@ the volume or the playbackRate property will be selected and updated dynamically
 
 function handleProgress() {
   const percentage = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = `${percentage}%`
+  progressBar.style.flexBasis = `${percentage}%`;
 }
-function scrub(e){
-    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration // get the value of where the progress bar was clicked and divide it by the total length of the dive then multiply it by the total video duration
-    video.currentTime = scrubTime
+function scrub(e) {
+  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration; // get the value of where the progress bar was clicked and divide it by the total length of the dive then multiply it by the total video duration
+  video.currentTime = scrubTime;
 }
 
 /*Hook up event listeners */
@@ -60,4 +60,8 @@ ranges.forEach((range) => {
   range.addEventListener("change", handleRangeUpdate);
 });
 
-progress.addEventListener("click", scrub)
+let mouseDown = false;
+progress.addEventListener("click", scrub);
+progress.addEventListener("mousedown", () => (mouseDown = true));
+progress.addEventListener("mouseup", () => (mouseDown = false));
+progress.addEventListener("mousemove", () => mouseDown && scrub(e));
