@@ -154,8 +154,8 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-moz-range-thumb {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   border-radius: 50px;
   background: #ffc600;
   cursor: pointer;

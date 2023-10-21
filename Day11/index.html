@@ -11,14 +11,20 @@
      <video class="player__video viewer" src="652333414.mp4"></video>
 
      <div class="player__controls">
+      
        <div class="progress">
         <div class="progress__filled"></div>
        </div>
        <button class="player__button toggle" title="Toggle Play">►</button>
        <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
        <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+      
        <button data-skip="-10" class="player__button">« 10s</button>
+       <div class="timer" style="color: #fff; font-size: 16px; text-align: center; position: relative; bottom: -5px;">00:00</div>
        <button data-skip="25" class="player__button">25s »</button>
+       <div class="full-screen" style="width: 10%; display: grid; place-items: center; cursor: pointer;">
+        <img src="expand-solid.svg" alt="full screen" style="width: 20px; object-fit: contain;">
+       </div>
      </div>
    </div>
 
