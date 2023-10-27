@@ -57,5 +57,6 @@ const cap2 = Object.assign({}, person, { number: 99 });
 console.log(cap2, person); //updates the new object but not the original one
 
 // We will hopefully soon see the object ...spread
+const cap3 = {...person} //this is very shallow and only goes one level deep
 
 // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
