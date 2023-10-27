@@ -24,7 +24,7 @@ console.log(age, age2) //returns 200, 100
     // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
     // So, how do we fix this? We take a copy instead!
-
+const team2 = players.slice() //calling slice without passing it an argument creates a copy of the original array, allowing you to update the values without changing the values of the orignal array
     // one way
 
     // or create a new array and concat the old one in
