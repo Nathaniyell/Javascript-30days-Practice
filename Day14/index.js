@@ -10,7 +10,10 @@ console.log(age, age2) //returns 200, 100
 
     // and we want to make a copy of it.
 
+    const team = players
+    console.log(players, team) //returns ['Wes', 'Sarah', 'Ryan', 'Poppy'];['Wes', 'Sarah', 'Ryan', 'Poppy'];
     // You might think we can just do something like this:
+    team[3]="Lux"
 
     // however what happens when we update that array?
 
