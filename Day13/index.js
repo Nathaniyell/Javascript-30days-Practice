@@ -18,6 +18,8 @@ function debounce(func, wait = 20, immediate = true) {
   function checkslide(e){
     slideImages.forEach(slideImage=>{
         const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2
+        
+        const imageBottom = slideImage.offsetTop + slideImage.height
     })
 
   }
