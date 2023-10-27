@@ -25,6 +25,10 @@ console.log(age, age2) //returns 200, 100
 
     // So, how do we fix this? We take a copy instead!
 const team2 = players.slice() //calling slice without passing it an argument creates a copy of the original array, allowing you to update the values without changing the values of the orignal array
+team2[3]= "Nath" //updates the last item in the team2 array but the original array still stays untouched
+
+
+
     // one way
 
     // or create a new array and concat the old one in
