@@ -35,6 +35,8 @@ const team3 = [].concat(players); //another way to create a copy of an array
 // or use the new ES6 Spread
 const team4 = [...players];
 
+const team5 = Array.from(players) //another way to creat a copy
+
 // now when we update it, the original one isn't changed
 
 // The same thing goes for objects, let's say we have a person object
