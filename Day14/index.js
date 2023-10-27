@@ -2,6 +2,9 @@
 let age = 100
 let age2 = age
 console.log(age, age2) //returns 100, 100
+age = 200
+console.log(age, age2) //returns 200, 100
+
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
