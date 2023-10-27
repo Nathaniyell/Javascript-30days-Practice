@@ -69,3 +69,8 @@ const nath = {
         facebook: "Nathaniel Essien"
     }
 }
+const newNath = Object.assign({}, nath) //creates a copy of the original array
+console.clear() //to clear whatever was already on the console
+console.log(nath);
+newNath.name = "Nathaniel"
+console.log(newNath);
