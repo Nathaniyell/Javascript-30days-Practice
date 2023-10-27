@@ -50,8 +50,11 @@ const person = {
 // and think we make a copy:
 const captain = person
 captain.number = 99 //this makes a reference to the original object and updates the original and the new object
+console.log(person, captain);
 
 // how do we take a copy instead?
+const cap2 = Object.assign({}, person, {number: 99})
+console.log(cap2, person); //updates the new object but not the original one
 
 // We will hopefully soon see the object ...spread
 
