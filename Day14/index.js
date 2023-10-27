@@ -60,3 +60,12 @@ console.log(cap2, person); //updates the new object but not the original one
 const cap3 = {...person} //this is very shallow and only goes one level deep
 
 // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+const nath = {
+    name: "Nath",
+    age: 100,
+    social:{
+        twitter: "@_kvngNath",
+        facebook: "Nathaniel Essien"
+    }
+}
