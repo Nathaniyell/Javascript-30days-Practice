@@ -28,6 +28,9 @@ function checkslide(e) {
 
     if(isHalfShown&&isNotScrolledPast){
       slideImage.classList.add("active")
+    }else{
+      slideImage.classList.remove("active")
+
     }
   });
 }
