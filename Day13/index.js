@@ -24,13 +24,12 @@ function checkslide(e) {
     const imageBottom = slideImage.offsetTop + slideImage.height; //bottom of the image
 
     const isHalfShown = slideInAt > slideImage.offsetTop;
-    const isNotScrolledPast = window.scrollY < imageBottom
+    const isNotScrolledPast = window.scrollY < imageBottom;
 
-    if(isHalfShown&&isNotScrolledPast){
-      slideImage.classList.add("active")
-    }else{
-      slideImage.classList.remove("active")
-
+    if (isHalfShown && isNotScrolledPast) {
+      slideImage.classList.add("active");
+    } else {
+      slideImage.classList.remove("active");
     }
   });
 }
