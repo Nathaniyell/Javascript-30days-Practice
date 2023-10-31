@@ -9,4 +9,8 @@ const addItems = document.querySelector('.add-items');
       text,
       done: false
     }
+    items.push(item);
+    populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
+    this.reset();
   }
