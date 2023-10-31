@@ -14,3 +14,6 @@ const addItems = document.querySelector('.add-items');
     localStorage.setItem('items', JSON.stringify(items));
     this.reset();
   }
+  function populateList(plates = [], platesList) {
+
+  }
