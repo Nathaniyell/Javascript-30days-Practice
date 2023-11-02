@@ -24,3 +24,4 @@ const addItems = document.querySelector('.add-items');
       `;
     }).join('');
   }
+addItems.addEventListener("submit", addItem)
