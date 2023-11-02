@@ -12,7 +12,7 @@ const addItems = document.querySelector('.add-items');
     items.push(item);
     populateList(items, itemsList);
     localStorage.setItem('items', JSON.stringify(items));
-    this.reset();
+    this.reset(); //used to clear the form element
   }
   function populateList(plates = [], platesList) {
     platesList.innerHTML = plates.map((plate, i) => {
