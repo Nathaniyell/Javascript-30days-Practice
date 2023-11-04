@@ -35,6 +35,8 @@ if(!e.target.matches("input")){
 const element = e.target
 const index = element.dataset.index
 items[index].done = !items[index].done
+localStorage.setItem("items", JSON.stringify(items));
+populateList(items, itemsList)
 }
 
 addItems.addEventListener("submit", addItem);
