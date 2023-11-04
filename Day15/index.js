@@ -29,7 +29,9 @@ function populateList(plates = [], platesList) {
     .join("");
 }
 function toggleDone(e){
-
+if(!e.target.matches("input")){
+  return
+}
 }
 
 addItems.addEventListener("submit", addItem);
