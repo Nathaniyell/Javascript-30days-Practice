@@ -45,4 +45,21 @@ function getNthPermutation(n, digits) {
 const millionthPermutation = getNthPermutation(1000000, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 console.log(millionthPermutation);
 
+//2. Find the sum of the digits in the number 100!
+function calculateFactorial(num) {
+  if (num === 0 || num === 1) {
+      return BigInt(1);
+  } else {
+      return BigInt(num) * calculateFactorial(num - 1);
+  }
+}
+
+function sumOfDigits(num) {
+  return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+}
+
+const factorial100 = calculateFactorial(100);
+const sumDigitsFactorial100 = sumOfDigits(factorial100);
+
+console.log(sumDigitsFactorial100);
 
