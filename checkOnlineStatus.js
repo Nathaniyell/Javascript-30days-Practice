@@ -18,3 +18,7 @@ window.addEventListener("online", () => {
 window.addEventListener("offline", () => {
   errorElement.style.display = "block"; // If the user is offline, display the error message
 });
+
+
+// JAVASCRIPT PROBLEMS AND SOLUTIONS
+// A permutation is an ordered arrangement of objects. What is the millionth lexicographic permutation of the digits 0,1,2,3,4,5,6,7,8,9
