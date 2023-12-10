@@ -98,9 +98,9 @@ function findTriangleNumberWithDivisors(divisorCount) {
 }
 
 const targetDivisorCount = 500;
-const result = findTriangleNumberWithDivisors(targetDivisorCount);
+const result2 = findTriangleNumberWithDivisors(targetDivisorCount);
 
-console.log(result);
+console.log(result2);
 
 //4. The number, 197, 8£ called a circular orine because all rotations of the digit: 197,971, and 719 are themselves prime.How many circular primes are there below one million
 
