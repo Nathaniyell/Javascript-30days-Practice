@@ -144,3 +144,9 @@ const limit = 1000000;
 const result = countCircularPrimes(limit);
 
 console.log(result);
+
+
+//React Folder structure
+//1. npm init react-app
+// robots.txt file - which is used for search engine optimization. 
+// Also, there is a manifest.json file - which is used to provide some metadata to a device when you're React powered web app is installed on it
