@@ -147,3 +147,7 @@ if(!obj[item]){
     walk:0,
     truck:0
 })
+
+let fruits = ["apple", "banana", "orange", "grape", "kiwi"];
+let citrus = fruits.slice(1,4)
+console.log(citrus)
